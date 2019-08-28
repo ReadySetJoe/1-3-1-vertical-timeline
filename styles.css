@@ -15,16 +15,46 @@ body::before {
 }
 
 h3 {
-  display: inline-block;
+  padding-right: 80px;
+  margin: 8px;
 }
 /* "once I get to 768 pixels or greater, target these elements (block by defaults) and change them to inline-block and give them a width of 200px" */
-@media(max-width: 768px) {
-  .event {
-    clear: left;
-    float: right;
-  }
+.event {
+  height: 100%;
+  width: 45%;
+  background: cyan;
+  border: black 2px solid;
+  margin: 10px;
+  position: relative;
+  clear: both;
+  float: left;
 }
 
+.event:nth-child(2n) {
+  background: red;
+  clear: both;
+  float: right;
+}
+
+.time {
+  position: absolute;
+  display: inline-block;
+  background: green;
+  text-align: center;
+  top: 0;
+  right: 0;
+  padding: 5px;
+}
+
+#t3 div:not(.time) {
+  left:15%;
+  top:15%;
+  bottom: 0;
+  right: 1px;
+  position: absolute;
+  background: cyan;
+  border: black 2px solid;
+}
 /* @keyframes fade-in {
   0% {
     opacity:0;
@@ -36,41 +66,16 @@ h3 {
   -moz-animation: fade-in 6s;
   animation: fade-in 6s;
 } */
-
-.event {
-  height: 100%;
-  width: 45%;
-  background: cyan;
-  border: black 2px solid;
-  position: relative;
-  margin: 10px;
-  position: relative;
-  clear: right;
-  float: left;
+@media(max-width: 768px) {
+  body::before {
+    position: absolute;
+  }
+  .event {
+    clear: both;
+    float: right;
+  }
 }
 
-.event:nth-child(2n) {
-  background: red;
-  clear: left;
-  float: right;
-}
-
-.time {
-  position: absolute;
-  display: inline-block;
-  top: 0;
-  right: 0;
-  padding: 5px;
-}
-
-#t3 div {
-  height: 90%;
-  width: 90%;
-  top:15px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: absolute;
-  background: cyan;
-  border: black 2px solid;
+p {
+  margin: 5px 10px;
 }
