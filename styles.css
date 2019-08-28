@@ -5,6 +5,10 @@
   word-break: break-word;
 }
 
+body {
+  background: #A9A9A9;
+}
+
 body::before {
   content: '';
   height: 1000px;
@@ -28,20 +32,13 @@ div {
 .event {
   height: 100%;
   width: 45%;
-  background: cyan;
-  border: black 2px solid;
+  background: white;
   margin: 10px;
   display: inline-block;
   position: relative;
   clear: both;
   float: left;
 }
-
-.container:nth-child(2n+1) {
-  clear: both;
-  float: right;
-}
-
 
 .icon {
   float: left;
@@ -65,26 +62,27 @@ div {
   top: 0;
   right: 0;
   padding: 5px;
-  margin:0
+  margin:0;
 }
 
 .pen {
-  position: relative
+  position: relative;
   right: -100px;
   height: 20px;
   margin: 5px;
-
 }
-
-/* .icon:nth-child(2) {
-  top: 100px;
-}
-.icon:nth-child(3) {
-
-} */
 
 p {
   margin: 5px 10px;
+}
+
+#t2 {
+  float:right;
+}
+
+#i2 {
+  float: right;
+  right: -10px;
 }
 
 #t3 div:not(.time) {
@@ -93,7 +91,6 @@ p {
   bottom: 0;
   right: 1px;
   position: absolute;
-  background: cyan;
   border: black 2px solid;
 }
 #t3 div:not(.time)::after {
