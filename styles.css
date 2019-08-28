@@ -1,3 +1,8 @@
+* {
+  font-family: sans-serif;
+  margin: 5px;
+}
+
 body::before {
   content: '';
   height: 1000px;
@@ -9,10 +14,14 @@ body::before {
   left:0;
 }
 
+h3 {
+  display: inline-block;
+}
 /* "once I get to 768 pixels or greater, target these elements (block by defaults) and change them to inline-block and give them a width of 200px" */
 @media(max-width: 768px) {
-  body::before{
-    /* make it move to the right wall */
+  .event {
+    clear: left;
+    float: right;
   }
 }
 
@@ -28,24 +37,30 @@ body::before {
   animation: fade-in 6s;
 } */
 
-div:not(.container){
-  height: 100px;
-  width: 30%;
+.event {
+  height: 100%;
+  width: 45%;
   background: cyan;
   border: black 2px solid;
   position: relative;
   margin: 10px;
-}
-
-.event {
-  display: block;
   position: relative;
+  clear: right;
+  float: left;
 }
 
 .event:nth-child(2n) {
   background: red;
-  right: 10%;
-  left:auto;
+  clear: left;
+  float: right;
+}
+
+.time {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  right: 0;
+  padding: 5px;
 }
 
 #t3 div {
