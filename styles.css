@@ -1,15 +1,16 @@
 body::before {
   content: '';
-  height: 100px;
-  width: 5px;
+  height: 1000px;
+  width: 10px;
   background: navy;
   position: absolute;
+  margin: auto;
+  right:0;
+  left:0;
 }
 
-
-
 /* "once I get to 768 pixels or greater, target these elements (block by defaults) and change them to inline-block and give them a width of 200px" */
-@media(min-width: 768px) {
+@media(max-width: 768px) {
   body::before{
     /* make it move to the right wall */
   }
@@ -27,16 +28,27 @@ body::before {
   animation: fade-in 6s;
 } */
 
-div {
+div:not(.container){
   height: 100px;
-  width: 300px;
-  position: relative;
+  width: 30%;
   background: cyan;
   border: black 2px solid;
-  margin: auto;
+  position: relative;
+  margin: 10px;
 }
 
-div > div {
+.event {
+  display: block;
+  position: relative;
+}
+
+.event:nth-child(2n) {
+  background: red;
+  right: 10%;
+  left:auto;
+}
+
+#t3 div {
   height: 90%;
   width: 90%;
   top:15px;
