@@ -1,0 +1,49 @@
+body::before {
+  content: '';
+  height: 100px;
+  width: 5px;
+  background: navy;
+  position: absolute;
+}
+
+
+
+/* "once I get to 768 pixels or greater, target these elements (block by defaults) and change them to inline-block and give them a width of 200px" */
+@media(min-width: 768px) {
+  body::before{
+    /* make it move to the right wall */
+  }
+}
+
+/* @keyframes fade-in {
+  0% {
+    opacity:0;
+  }
+} */
+
+/* .fade-in {
+  -webkit-animation: fade-in 6s;
+  -moz-animation: fade-in 6s;
+  animation: fade-in 6s;
+} */
+
+div {
+  height: 100px;
+  width: 300px;
+  position: relative;
+  background: cyan;
+  border: black 2px solid;
+  margin: auto;
+}
+
+div > div {
+  height: 90%;
+  width: 90%;
+  top:15px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background: cyan;
+  border: black 2px solid;
+}
