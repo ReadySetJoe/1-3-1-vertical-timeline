@@ -40,8 +40,26 @@ div {
   float: left;
 }
 
+button {
+  color: white;
+  background: #006090;
+  border: transparent;
+  padding: 5px 10px;
+}
+
+img {
+  width:100%;
+  margin:0;
+}
+#whitetitle {
+  position: absolute;
+  color: white;
+  top: 0px;
+  padding-right: 10px;
+}
 .icon {
   float: left;
+  display: inline;
   position: relative;
   top: 10px;
   right: 8px;
@@ -75,7 +93,13 @@ div {
 p {
   margin: 5px 10px;
 }
-
+blockquote {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  padding-left: 15px;
+  border-left: 3px solid #ccc;
+}
 #t2 {
   float:right;
 }
@@ -113,12 +137,22 @@ p {
   }
 
   .event {
-    clear: both;
     float: right;
-    width: 95%;
+    width: 85%;
+  }
+
+  .icon {
+    float:left;
+    left: 0;
+  }
+
+  #i2 {
+    float: left;
+    left: 0;
   }
 
   #t3 div:not(.time) {
     left:15%;
     top:5%;
+  }
 }
