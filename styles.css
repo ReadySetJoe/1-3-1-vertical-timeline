@@ -40,6 +40,9 @@ div {
   float: left;
 }
 
+#t2 > div {
+  margin: 0;
+}
 button {
   color: white;
   background: #006090;
